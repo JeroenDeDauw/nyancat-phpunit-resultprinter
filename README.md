@@ -1,4 +1,4 @@
-<p><img alt="Video of the Nyan Cat result printer for PHPUnit" src="https://github.com/whatthejeff/nyancat-phpunit-resultprinter/raw/master/nyan.gif"></p>
+<p><img alt="Video of the Nyan Cat result printer for PHPUnit" src="https://github.com/JeroenDeDauw/nyancat-phpunit-resultprinter/raw/master/nyan.gif"></p>
 
 ## Requirements
 
@@ -46,7 +46,7 @@ attribute to the `<phpunit>` element in your `phpunit.xml` file:
 
 ## Tests
 
-[![Build Status](https://travis-ci.org/whatthejeff/nyancat-phpunit-resultprinter.png?branch=master)](https://travis-ci.org/whatthejeff/nyancat-phpunit-resultprinter)
+[![Build Status](https://travis-ci.org/JeroenDeDauw/nyancat-phpunit-resultprinter.svg?branch=master)](https://travis-ci.org/JeroenDeDauw/nyancat-phpunit-resultprinter)
 
 To run the test suite, you need [composer](http://getcomposer.org).
 

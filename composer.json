@@ -1,5 +1,5 @@
 {
-    "name": "whatthejeff/nyancat-phpunit-resultprinter",
+    "name": "jeroen/nyancat-phpunit-resultprinter",
     "description": "Nyan Cat result printer for PHPUnit",
     "keywords": ["nyan","cat","rainbow","phpunit","tests"],
     "homepage": "http://github.com/whatthejeff/nyancat-phpunit-resultprinter",
@@ -12,7 +12,7 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/whatthejeff/nyancat-phpunit-resultprinter/issues"
+        "issues": "https://github.com/JeroenDeDauw/nyancat-phpunit-resultprinter/issues"
     },
     "require": {
         "php": "^7.1",
@@ -30,6 +30,9 @@
         "branch-alias": {
             "dev-master": "2.0-dev"
         }
+    },
+    "replace": {
+        "whatthejeff/nyancat-phpunit-resultprinter": "*"
     },
     "scripts": {
         "test": "phpunit"
