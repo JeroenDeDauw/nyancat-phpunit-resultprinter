@@ -4,6 +4,7 @@ ChangeLog
 2.1.0
 -----
 
+* Forked from `whatthejeff/nyancat-phpunit-resultprinter` to `jeroen/nyancat-phpunit-resultprinter`
 * Added support for PHPUnit 7 (thanks @TiMESPLiNTER and @JeroenDeDauw)
 
 2.0.0
