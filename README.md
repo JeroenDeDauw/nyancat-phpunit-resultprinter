@@ -69,6 +69,15 @@ attribute to the `<phpunit>` element in your `phpunit.xml` file:
 
     bootstrap="vendor/autoload.php"
 
+## Switching over from whatthejeff
+
+To switch from `whatthejeff/nyancat-phpunit-resultprinter` to `jeroen/nyancat-phpunit-resultprinter`,
+you need to
+
+1. Update your `composer.json`: replace `whatthejeff/nyancat` by `jeroen/nyancat`
+2. Update your `phpunit.xml`: replace `vendor/whatthejeff/` by `vendor/jeroen/`
+3. Run `composer update`
+
 ## Tests
 
 To run the test suite, you need [composer](http://getcomposer.org).
