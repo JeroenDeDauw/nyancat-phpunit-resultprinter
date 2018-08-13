@@ -48,7 +48,7 @@ and run the `composer install` command to install it:
 ~~~json
 {
     "require-dev": {
-        "whatthejeff/nyancat-phpunit-resultprinter": "^2.0"
+        "jeroen/nyancat-phpunit-resultprinter": "^2.0"
     }
 }
 ~~~
@@ -56,7 +56,7 @@ and run the `composer install` command to install it:
 Once installed, add the following attributes to the `<phpunit>` element in your
 `phpunit.xml` file:
 
-    printerFile="vendor/whatthejeff/nyancat-phpunit-resultprinter/src/NyanCat/PHPUnit/ResultPrinter.php"
+    printerFile="vendor/jeroen/nyancat-phpunit-resultprinter/src/NyanCat/PHPUnit/ResultPrinter.php"
     printerClass="NyanCat\PHPUnit\ResultPrinter"
 
 **NOTE:** If PHPUnit was not installed via composer, you also need to include
