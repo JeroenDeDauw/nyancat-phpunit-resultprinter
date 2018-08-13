@@ -9,7 +9,6 @@
          printerClass="NyanCat\PHPUnit\ResultPrinter"
          processIsolation="false"
          stopOnFailure="false"
-         syntaxCheck="false"
          bootstrap="../../../../../vendor/autoload.php"
 >
 
