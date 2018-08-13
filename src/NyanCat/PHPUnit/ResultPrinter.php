@@ -74,7 +74,7 @@ class ResultPrinter extends \PHPUnit\TextUI\ResultPrinter
     /**
      * {@inheritdoc}
      */
-    protected function writeProgress($progress): void
+    protected function writeProgress(string $progress): void
     {
         if($this->debug) {
             parent::writeProgress($progress);
