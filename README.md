@@ -2,14 +2,35 @@
 
 ## Requirements
 
-The Nyan Cat result printer for PHPUnit requires:
+The Nyan Cat result printer for PHPUnit requires a terminal emulator with support
+for ANSI escape sequences, including color and cursor control.
 
- * PHP 7+.
- * PHPUnit 7+.
- * A terminal emulator with support for ANSI escape sequences, including color
-   and cursor control.
-
-Use version `^1.3` to support PHPUnit 4.8+ / 5.x.
+<table>
+	<tr>
+		<th></th>
+		<th>PHP</th>
+		<th>PHPUnit</th>
+		<th>Awesome</th>
+	</tr>
+	<tr>
+		<th>Version 2.1</th>
+		<td>~7.1</td>
+		<td>~7.0</td>
+		<td>~=[,,_,,]:3</td>
+	</tr>
+	<tr>
+		<th>Version 2.0</th>
+		<td>~7.0</td>
+		<td>~6.0</td>
+		<td>~=[,,_,,]:3</td>
+	</tr>
+	<tr>
+		<th>Version 1.3</th>
+		<td>~7.0|^5.3.3</td>
+		<td>~5.0|~4.0</td>
+		<td>~=[,,_,,]:3</td>
+	</tr>
+</table>
 
 **NOTE:** By default, the Windows console does not support ANSI escape
 sequences. If you'd like to use the Nyan Cat result printer on Windows, you
