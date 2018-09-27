@@ -1,6 +1,11 @@
 ChangeLog
 =========
 
+2.2.0
+-----
+
+* Added progress %
+
 2.1.0
 -----
 

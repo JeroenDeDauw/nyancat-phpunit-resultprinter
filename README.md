@@ -17,7 +17,7 @@ for ANSI escape sequences, including color and cursor control.
 		<th>~=[,,_,,]:3</th>
 	</tr>
 	<tr>
-		<th>Version 2.1</th>
+		<th>Version 2.1 & 2.2</th>
 		<td>~7.1</td>
 		<td>~7.0</td>
 		<td>✔</td>

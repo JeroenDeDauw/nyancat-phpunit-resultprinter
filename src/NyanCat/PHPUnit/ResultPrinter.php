@@ -14,7 +14,7 @@ namespace NyanCat\PHPUnit;
 use NyanCat\Cat;
 use NyanCat\Rainbow;
 use NyanCat\Team;
-use NyanCat\Scoreboard;
+use NyanCat\FixedScoreboard;
 
 use Fab\Factory as FabFactory;
 use PHPUnit\Framework\AssertionFailedError;
@@ -34,10 +34,12 @@ use PHPUnit\Framework\TestSuite;
  */
 class ResultPrinter extends \PHPUnit\TextUI\ResultPrinter
 {
+	const ESC = "\x1b[";
+
     /**
      * The Nyan Cat scoreboard.
      *
-     * @var \NyanCat\Scoreboard
+     * @var \NyanCat\FixedScoreboard
      */
     private $scoreboard;
 
@@ -52,7 +54,7 @@ class ResultPrinter extends \PHPUnit\TextUI\ResultPrinter
         $numberOfColumns = 80,
         $reverse = false
     ) {
-        $this->scoreboard = new Scoreboard(
+        $this->scoreboard = new FixedScoreboard(
             new Cat(),
             new Rainbow(
                 FabFactory::getFab(
@@ -62,9 +64,9 @@ class ResultPrinter extends \PHPUnit\TextUI\ResultPrinter
             array(
                 new Team('pass', 'green', '^'),
                 new Team('fail', 'red', 'o'),
-                new Team('pending', 'cyan', '-'),
+                new Team('pending', 'cyan', '-')
             ),
-            5,
+            6,
             array($this, 'write')
         );
 
@@ -81,7 +83,9 @@ class ResultPrinter extends \PHPUnit\TextUI\ResultPrinter
             return;
         }
 
-        $this->scoreboard->score($progress);
+		$this->numTestsRun++;
+
+        $this->scoreboard->score($progress, 1, \floor(($this->numTestsRun / $this->numTests) * 100));
     }
 
     /**
