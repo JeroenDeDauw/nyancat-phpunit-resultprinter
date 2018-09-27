@@ -1,6 +1,6 @@
+[![Build Status](https://travis-ci.org/JeroenDeDauw/nyancat-phpunit-resultprinter.svg?branch=master)](https://travis-ci.org/JeroenDeDauw/nyancat-phpunit-resultprinter)
 [![Latest Stable Version](https://poser.pugx.org/jeroen/nyancat-phpunit-resultprinter/version.png)](https://packagist.org/packages/jeroen/nyancat-phpunit-resultprinter)
 [![Download count](https://poser.pugx.org/jeroen/nyancat-phpunit-resultprinter/d/total.png)](https://packagist.org/packages/jeroen/nyancat-phpunit-resultprinter)
-[![Build Status](https://travis-ci.org/JeroenDeDauw/nyancat-phpunit-resultprinter.svg?branch=master)](https://travis-ci.org/JeroenDeDauw/nyancat-phpunit-resultprinter)
 
 <p><img alt="Video of the Nyan Cat result printer for PHPUnit" src="https://github.com/JeroenDeDauw/nyancat-phpunit-resultprinter/raw/master/nyan.gif"></p>
 
