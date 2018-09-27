@@ -57,8 +57,7 @@ and run the `composer install` command to install it:
 }
 ~~~
 
-Once installed, add the following attributes to the `<phpunit>` element in your
-`phpunit.xml` file:
+Once installed, add the following attributes to the `<phpunit>` element in your `phpunit.xml` file:
 
     printerFile="vendor/jeroen/nyancat-phpunit-resultprinter/src/NyanCat/PHPUnit/ResultPrinter.php"
     printerClass="NyanCat\PHPUnit\ResultPrinter"
