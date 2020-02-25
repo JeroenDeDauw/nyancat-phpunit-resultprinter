@@ -12,26 +12,32 @@ for ANSI escape sequences, including color and cursor control.
 <table>
 	<tr>
 		<th></th>
-		<th>PHP</th>
 		<th>PHPUnit</th>
+		<th>PHP</th>
 		<th>~=[,,_,,]:3</th>
 	</tr>
+    <tr>
+        <th>Nyan v2.3</th>
+        <td>7.x, 8.x</td>
+        <td>~7.1</td>
+        <td>✔</td>
+    </tr>
 	<tr>
-		<th>Version 2.1 & 2.2</th>
+		<th>Nyan v2.1 & 2.2</th>
+		<td>7.x</td>
 		<td>~7.1</td>
+		<td>✔</td>
+	</tr>
+	<tr>
+		<th>Nyan v2.0</th>
+		<td>6.x</td>
 		<td>~7.0</td>
 		<td>✔</td>
 	</tr>
 	<tr>
-		<th>Version 2.0</th>
-		<td>~7.0</td>
-		<td>~6.0</td>
-		<td>✔</td>
-	</tr>
-	<tr>
-		<th>Version 1.3</th>
+		<th>Nyan v1.3</th>
+		<td>4.x, 5.x</td>
 		<td>~7.0|^5.3.3</td>
-		<td>~5.0|~4.0</td>
 		<td>✔</td>
 	</tr>
 </table>
