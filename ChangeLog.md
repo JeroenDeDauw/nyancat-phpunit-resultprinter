@@ -1,10 +1,15 @@
 ChangeLog
 =========
 
+2.3.0
+-----
+
+* Added support for PHPUnit 8 (thanks @JeroenDeDauw)
+
 2.2.0
 -----
 
-* Added progress %
+* Added progress % (thanks @JeroenDeDauw)
 
 2.1.0
 -----
