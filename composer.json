@@ -15,7 +15,7 @@
         "issues": "https://github.com/JeroenDeDauw/nyancat-phpunit-resultprinter/issues"
     },
     "require": {
-        "php": "^7.1",
+        "php": ">=7.1",
         "whatthejeff/nyancat-scoreboard": "~1.1"
     },
     "require-dev": {
