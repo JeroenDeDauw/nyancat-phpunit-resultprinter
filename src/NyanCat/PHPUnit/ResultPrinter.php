@@ -42,6 +42,8 @@ if(version_compare(\PHPUnit\Runner\Version::id(), "9.0","<")){
  */
 class ResultPrinter extends \PHPUnit\TextUI\DefaultResultPrinter
 {
+
+
 	const ESC = "\x1b[";
 
     /**
@@ -99,7 +101,7 @@ class ResultPrinter extends \PHPUnit\TextUI\DefaultResultPrinter
     /**
      * {@inheritdoc}
      */
-    protected function printHeader(TestResult $result): void
+    protected function printHeader(TestResult $result = null): void
     {
         if (!$this->debug) {
             if (!$this->scoreboard->isRunning()) {
