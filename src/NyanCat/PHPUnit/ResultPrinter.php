@@ -20,6 +20,7 @@ use Fab\Factory as FabFactory;
 use PHPUnit\Framework\AssertionFailedError;
 use PHPUnit\Framework\Test;
 use PHPUnit\Framework\TestCase;
+use PHPUnit\Framework\TestResult;
 use PHPUnit\Framework\TestSuite;
 
 /**
@@ -91,7 +92,7 @@ class ResultPrinter extends \PHPUnit\TextUI\ResultPrinter
     /**
      * {@inheritdoc}
      */
-    protected function printHeader(): void
+    protected function printHeader(TestResult $result): void
     {
         if (!$this->debug) {
             if (!$this->scoreboard->isRunning()) {
@@ -100,7 +101,7 @@ class ResultPrinter extends \PHPUnit\TextUI\ResultPrinter
             $this->scoreboard->stop();
         }
 
-        parent::printHeader();
+        parent::printHeader($result);
     }
 
     /**
