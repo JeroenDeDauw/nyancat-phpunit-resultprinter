@@ -11,6 +11,8 @@
 
 namespace NyanCat\PHPUnit;
 
+
+
 use NyanCat\Cat;
 use NyanCat\Rainbow;
 use NyanCat\Team;
@@ -23,6 +25,11 @@ use PHPUnit\Framework\TestCase;
 use PHPUnit\Framework\TestResult;
 use PHPUnit\Framework\TestSuite;
 
+//support for versions older than 9.0
+if(version_compare(\PHPUnit\Runner\Version::id(), "9.0","<")){
+	class_alias('\PHPUnit\TextUI\ResultPrinter','\PHPUnit\TextUI\DefaultResultPrinter');
+}
+
 /**
  * Mmmm poptarts...
  *
@@ -33,7 +40,7 @@ use PHPUnit\Framework\TestSuite;
  *
  * @author Jeff Welch <whatthejeff@gmail.com>
  */
-class ResultPrinter extends \PHPUnit\TextUI\ResultPrinter
+class ResultPrinter extends \PHPUnit\TextUI\DefaultResultPrinter
 {
 	const ESC = "\x1b[";
 

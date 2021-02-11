@@ -142,8 +142,12 @@ class FixedScoreboard
      * @param string $team    The name of the team
      * @param integer $points The number of points to add to the team's score.
      */
-    public function score($team, $points = 1, $percent)
+    public function score($team, $points, $percent)
     {
+    	if(null === $points){
+    		$points = 1;
+	    }
+
         if (isset($this->teams[$team])) {
             $this->teams[$team]->updateScore($points);
         }
