@@ -1,4 +1,4 @@
-name: Build Test
+name: build
 
 on:
   push:
@@ -9,10 +9,13 @@ on:
 jobs:
   build:
     name: NyanCat (PHP ${{ matrix.php-versions}})
+
     runs-on: ubuntu-latest
+    
     strategy:
       matrix:
         php-versions: ['7.1', '7.2', '7.3', '7.4', '8.0']
+    
     steps:
       - uses: actions/checkout@v2
         
@@ -26,7 +29,8 @@ jobs:
 
       - name: Validate composer.json and composer.lock
         run: composer validate
-
+        
+#if you need to force a cache miss you can create/update a repository secret (in your settings) called CACHE_VERSION
       - name: Cache Composer packages
         id: composer-cache
         uses: actions/cache@v2
