@@ -16,12 +16,18 @@ for ANSI escape sequences, including color and cursor control.
 		<th>PHP</th>
 		<th>~=[,,_,,]:3</th>
 	</tr>
-    <tr>
-        <th>Nyan v2.3</th>
-        <td>7.x, 8.x</td>
-        <td>~7.1</td>
-        <td>✔</td>
-    </tr>
+	<tr>
+		<th>Nyan v2.4</th>
+		<td>9.x, 8.x, 7.x</td>
+		<td>>=7.1</td>
+		<td>✔</td>
+	</tr>
+	<tr>
+		<th>Nyan v2.3</th>
+		<td>8.x, 7.x</td>
+		<td>~7.1</td>
+		<td>✔</td>
+	</tr>
 	<tr>
 		<th>Nyan v2.1 & 2.2</th>
 		<td>7.x</td>
