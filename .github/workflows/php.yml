@@ -1,4 +1,4 @@
-name: PHP Composer
+name: Build Test
 
 on:
   push:
@@ -8,30 +8,37 @@ on:
 
 jobs:
   build:
-
+    name: NyanCat (PHP ${{ matrix.php-versions}})
     runs-on: ubuntu-latest
-
+    strategy:
+      matrix:
+        php-versions: ['7.1', '7.2', '7.3', '7.4', '8.0']
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+        
+      - name: Setup PHP, with composer and extensions
+        uses: shivammathur/setup-php@v2 #https://github.com/shivammathur/setup-php
+        with:
+          php-version: ${{ matrix.php-versions }}
 
-    - name: Validate composer.json and composer.lock
-      run: composer validate
+      - name: Verify PHP version
+        run: php -v
 
-    - name: Cache Composer packages
-      id: composer-cache
-      uses: actions/cache@v2
-      with:
-        path: vendor
-        key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-php-
+      - name: Validate composer.json and composer.lock
+        run: composer validate
 
-    - name: Install dependencies
-      if: steps.composer-cache.outputs.cache-hit != 'true'
-      run: composer install --prefer-dist --no-progress --no-suggest
+      - name: Cache Composer packages
+        id: composer-cache
+        uses: actions/cache@v2
+        with:
+          path: vendor
+          key: ${{ runner.os }}-php${{ matrix.php-versions }}-${{ secrets.CACHE_VERSION }}-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-php${{ matrix.php-versions }}-${{ secrets.CACHE_VERSION }}-
 
-    # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
-    # Docs: https://getcomposer.org/doc/articles/scripts.md
-
-    - name: Run test suite
-      run: composer test
+      - name: Install dependencies
+        if: steps.composer-cache.outputs.cache-hit != 'true'
+        run: composer install --prefer-dist --no-progress --no-suggest
+    
+      - name: Run test suite
+        run: composer test
