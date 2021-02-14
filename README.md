@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/JeroenDeDauw/nyancat-phpunit-resultprinter.svg?branch=master)](https://travis-ci.org/JeroenDeDauw/nyancat-phpunit-resultprinter)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/JeroenDeDauw/nyancat-phpunit-resultprinter/build)](https://github.com/JeroenDeDauw/nyancat-phpunit-resultprinter/actions?query=workflow%3Abuild)
 [![Latest Stable Version](https://poser.pugx.org/jeroen/nyancat-phpunit-resultprinter/version.png)](https://packagist.org/packages/jeroen/nyancat-phpunit-resultprinter)
 [![Download count](https://poser.pugx.org/jeroen/nyancat-phpunit-resultprinter/d/total.png)](https://packagist.org/packages/jeroen/nyancat-phpunit-resultprinter)
 
